@@ -4,8 +4,8 @@ repo_url: https://github.com/esmsena/IHC-BRB.Mobilidade-2.2023
 theme:
   name: material
   language: pt
-  logo: ./docs/assets/brb_logo.png
-  favicon: ./docs/assets/brb_logo.png
+  logo: ./assets/brb_logo.png
+  favicon: ./assets/brb_logo.png
   features:
     - navigation.footer
     - header.autohide
@@ -15,28 +15,34 @@ theme:
   
   favicon: ./assets/twitch_icon.png
   palette:
-    - scheme: default
-      primary: deep purple
-      accent: purple
+    primary: light blue
+    accent: blue
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
         name: Switch to dark mode
 
-    - scheme: slate
-      primary: deep purple
-      accent: purple
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
-        
+        name: Switch to system preference
 nav:
     - Início: index.md
     - Código de Conduta: CODE_OF_CONDUCT.md
     - Políticas de Contribuição: CONTRIBUTING.md
 
 markdown_extensions:
-  - toc:
-      permalink: true
-      
   - attr_list
   - md_in_html
+  - toc:
+      permalink: true   
+
