@@ -31,9 +31,12 @@ theme:
         
 nav:
     - Início: index.md
+    - Código de Conduta: CODE_OF_CONDUCT.md
+    - Políticas de Contribuição: CONTRIBUTING.md
 
 markdown_extensions:
   - toc:
       permalink: true
+      
   - attr_list
   - md_in_html
